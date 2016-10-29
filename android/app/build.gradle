@@ -131,8 +131,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.facebook.react:react-native:+'
     compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
     compile project(':com.yoosee')
-    compile project(':slidingMenu')
     compile project(':vitamio')
 }
 

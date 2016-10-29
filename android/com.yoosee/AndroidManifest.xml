@@ -518,7 +518,7 @@
 				<category android:name="android.intent.category.DEFAULT" />
 			</intent-filter>
         </activity>
-        <activity android:name="com.jwkj.activity.AddWaitActicity" android:configChanges="locale|orientation"
+        <activity android:name="com.jwkj.activity.AddWaitActicity" android:configChanges="locale|orientation|screenSize"
 		    android:screenOrientation="portrait"
 		    android:alwaysRetainTaskState="true"
 		    android:theme="@android:style/Theme.NoTitleBar"
