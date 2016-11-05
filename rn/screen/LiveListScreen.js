@@ -71,8 +71,8 @@ export default class LiveListScreen extends React.Component {
             if (result) {
                 let favorites = JSON.parse(result);
                 this.dataBlob[0] = favorites;
-                this._reload();
             }
+            this._reload();
         });
     }
 

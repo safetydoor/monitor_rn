@@ -19,8 +19,8 @@ import PToast from '../utils/PToast.js';
 
 export default class MainScreen extends React.Component {
 
-    backTimes = 'xxxx';
-    lastBackTime = 'yyy';
+    backTimes = 0;
+    lastBackTime = 0;
     menuOpen = false;
     constructor(props) {
         super(props);
@@ -36,7 +36,7 @@ export default class MainScreen extends React.Component {
         const menu = <MainMenu navigator={this.props.navigator}/>;
 
         return (
-            <SideMenu menu={menu} ref={'sideMenu'} isOpen={this.state.menuOpen} onChange={this._onMenuChange}>
+            <SideMenu menu={menu} ref={'sideMenu'} isOpen={this.menuOpen} onChange={this._onMenuChange}>
                 <MainContentView navigator={this.props.navigator} onLeftPress={this._onLeftPress}/>
             </SideMenu>
         );
@@ -68,6 +68,10 @@ export default class MainScreen extends React.Component {
         }
         this.backTimes = this.backTimes + 1;
         this.lastBackTime = nowTime;
+        console.log('this.backTimes:' + this.backTimes);
+        console.log('nowTime:' + nowTime);
+        console.log('this.lastBackTime:' + this.lastBackTime);
+        console.log('-----------------------------------------')
         if (this.backTimes >= 2) {
             BackAndroid.exitApp();
         } else {

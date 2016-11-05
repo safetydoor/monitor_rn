@@ -117,6 +117,7 @@ export default class MainContentView extends React.Component {
         for (let ad of this.ads) {
             adViews.push((
                 <MainAdView
+                    key={ad.id}
                     adUrl={ad.adUrl}
                     imageUrl={ad.imageUrl}
                     name={ad.name}

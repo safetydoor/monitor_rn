@@ -98,9 +98,6 @@ public class WXEntryActivity extends Activity implements OnClickListener, IWXAPI
             mLoadingDialog = new PinWheelDialog(WXEntryActivity.this);
             mLoadingDialog.show();
         } else if (resId == R.id.login_other_method) {
-            Intent intent = new Intent();
-            intent.setClass(WXEntryActivity.this, PReactActivity.class);
-            startActivity(intent);
             finish();
         }
     }

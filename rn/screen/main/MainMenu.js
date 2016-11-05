@@ -12,12 +12,15 @@ import Text from 'Text';
 import Image from 'Image';
 import BackAndroid from 'BackAndroid';
 import InteractionManager from 'InteractionManager';
+import Dimensions from 'Dimensions';
 
 import WebScreen from '../WebScreen.js';
 
 import PButton from '../../components/PButton.js';
 import PColor from '../../utils/PColor.js';
 import Interface from '../../utils/Interface.js';
+
+const {height, width} = Dimensions.get('window');
 
 export default class MainMenu extends React.Component {
 
@@ -47,6 +50,7 @@ export default class MainMenu extends React.Component {
 
         return (
             <View style={styles.root}>
+                <Image style={styles.bg} source={require('../../images/bg.png')}/>
                 <Image style={styles.logo} source={require('../../images/app_logo.png')}/>
                 <Text style={styles.phone}>{this.state.phone}</Text>
                 <PButton
@@ -64,8 +68,8 @@ export default class MainMenu extends React.Component {
                     content={'退出'}
                     textColor={PColor.black}
                     textColorPressed={PColor.black}
-                    backgroundColor={PColor.light}
-                    backgroundColorPressed={PColor.white}
+                    backgroundColor={PColor.white}
+                    backgroundColorPressed={PColor.light}
                     onPress={this._onExitPress}
                     />
             </View>
@@ -104,6 +108,16 @@ const styles = StyleSheet.create({
         right: 0
     },
 
+    bg: {
+        width: width * 2 / 3,
+        height: height,
+        position: 'absolute',
+        top: 0,
+        bottom: 0,
+        left: 0,
+        right: 0
+    },
+
     logo: {
         width: 98,
         height: 66,
@@ -120,6 +134,11 @@ const styles = StyleSheet.create({
     },
 
     button: {
-        height: 40
-    }
+        width: 200,
+        height: 40,
+        borderRadius: 25,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 20
+    },
 });
