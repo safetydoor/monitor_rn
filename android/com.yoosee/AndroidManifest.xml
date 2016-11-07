@@ -597,7 +597,7 @@
 				<category android:name="android.intent.category.DEFAULT" />
 			</intent-filter>
 		</activity>
-		<activity android:name="com.jwkj.activity.ApMonitorActivity" android:configChanges="locale|orientation"
+		<activity android:name="com.jwkj.activity.ApMonitorActivity" android:configChanges="locale|orientation|screenSize"
 		    android:launchMode="singleTask"
 		    android:screenOrientation="portrait"
 			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
