@@ -34,7 +34,6 @@ export default class MainScreen extends React.Component {
 
     render() {
         const menu = <MainMenu navigator={this.props.navigator}/>;
-
         return (
             <SideMenu menu={menu} ref={'sideMenu'} isOpen={this.menuOpen} onChange={this._onMenuChange}>
                 <MainContentView navigator={this.props.navigator} onLeftPress={this._onLeftPress}/>
@@ -68,10 +67,6 @@ export default class MainScreen extends React.Component {
         }
         this.backTimes = this.backTimes + 1;
         this.lastBackTime = nowTime;
-        console.log('this.backTimes:' + this.backTimes);
-        console.log('nowTime:' + nowTime);
-        console.log('this.lastBackTime:' + this.lastBackTime);
-        console.log('-----------------------------------------')
         if (this.backTimes >= 2) {
             BackAndroid.exitApp();
         } else {

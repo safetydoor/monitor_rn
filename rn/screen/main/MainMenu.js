@@ -26,10 +26,12 @@ export default class MainMenu extends React.Component {
 
     constructor(props) {
         super(props);
+        this.renderHeaderImg = this.renderHeaderImg.bind(this);
         this._onFindPwdPress = this._onFindPwdPress.bind(this)
         this._onExitPress = this._onExitPress.bind(this)
         this.state = {
-            phone: ''
+            phone: '',
+            headImgUrl: ''
         }
     }
 
@@ -37,9 +39,11 @@ export default class MainMenu extends React.Component {
         Interface.getUserInfo((result)=> {
             if (result.code == '00') {
                 let phone = result.phone;
+                let headImgUrl = result.headImgUrl;
                 InteractionManager.runAfterInteractions(() => {
                     this.setState({
                         phone: phone,
+                        headImgUrl: headImgUrl,
                     })
                 });
             }
@@ -51,7 +55,7 @@ export default class MainMenu extends React.Component {
         return (
             <View style={styles.root}>
                 <Image style={styles.bg} source={require('../../images/bg.png')}/>
-                <Image style={styles.logo} source={require('../../images/app_logo.png')}/>
+                {this.renderHeaderImg()}
                 <Text style={styles.phone}>{this.state.phone}</Text>
                 <PButton
                     style={styles.button}
@@ -74,6 +78,18 @@ export default class MainMenu extends React.Component {
                     />
             </View>
         );
+    }
+
+    renderHeaderImg() {
+        if (this.state.headImgUrl) {
+            return (
+                <Image style={styles.logo} source={{uri: this.state.headImgUrl}}/>
+            );
+        } else {
+            return (
+                <Image style={styles.logo} source={require('../../images/app_logo.png')}/>
+            );
+        }
     }
 
     _onFindPwdPress() {

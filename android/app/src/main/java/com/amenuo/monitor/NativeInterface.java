@@ -3,12 +3,14 @@ package com.amenuo.monitor;
 import android.content.Intent;
 
 import com.amenuo.monitor.action.LoginStateAction;
+import com.amenuo.monitor.action.WXAction;
 import com.amenuo.monitor.activity.LivePlayerActivity;
 import com.amenuo.monitor.model.WeatherModel;
 import com.amenuo.monitor.task.LoginTask;
 import com.amenuo.monitor.task.RegisterTask;
 import com.amenuo.monitor.task.VerificationCodeTask;
 import com.amenuo.monitor.utils.HttpRequest;
+import com.amenuo.monitor.utils.SPHelper;
 import com.amenuo.monitor.wxapi.WXEntryActivity;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Callback;
@@ -32,7 +34,7 @@ import okhttp3.Response;
 /**
  * Created by laps on 10/30/16.
  */
-public class NativeInterface  extends ReactContextBaseJavaModule{
+public class NativeInterface extends ReactContextBaseJavaModule {
 
     private PinWheelDialog mLoadingDialog;
 
@@ -84,6 +86,9 @@ public class NativeInterface  extends ReactContextBaseJavaModule{
     @ReactMethod
     public void isLogin(Callback successCallback) {
         boolean isLogin = LoginStateAction.checkLogin();
+        if (!isLogin) {
+            isLogin = WXAction.isLogin();
+        }
         successCallback.invoke(isLogin);
     }
 
@@ -123,6 +128,11 @@ public class NativeInterface  extends ReactContextBaseJavaModule{
             NpcCommon.mThreeNum = activeUser.three_number;
             map.putString("code", "00");
             map.putString("phone", activeUser.phone);
+            map.putString("message", "登陆成功");
+        } else if (WXAction.isLogin()) {
+            map.putString("code", "00");
+            map.putString("phone", SPHelper.getInstance().getString("nickName", ""));
+            map.putString("headImgUrl", SPHelper.getInstance().getString("headImgUrl", ""));
             map.putString("message", "登陆成功");
         } else {
             map.putString("code", "01");
