@@ -24,12 +24,12 @@ public class HttpRequest {
     public static final MediaType JSON
             = MediaType.parse("application/json; charset=utf-8");
 
-    public static void requestWXAccessToken(String code, Callback responseCallback){
+    public static void requestWXAccessToken(String code, Callback responseCallback) {
         String url = String.format(WX_ACCESS_TOKEN_URL, Constants.WECHAT_APP_ID, Constants.WECHAT_APP_SECRET, code);
         enqueue(url, responseCallback);
     }
 
-    public static void requestWXUserInfo(String access_token, String openid, Callback responseCallback){
+    public static void requestWXUserInfo(String access_token, String openid, Callback responseCallback) {
         String url = String.format(WX_USERINFO_URL, access_token, openid);
         enqueue(url, responseCallback);
     }
@@ -49,8 +49,15 @@ public class HttpRequest {
         enqueue(url, responseCallback);
     }
 
-    public static void requestWeather(String cityName, Callback responseCallback){
-        String url = "http://apis.baidu.com/apistore/weatherservice/cityname?cityname=" + cityName;
+    public static void requestWeather(String cityName, Callback responseCallback) {
+//        String url = "http://apis.baidu.com/apistore/weatherservice/cityname?cityname=" + cityName;
+//        Request request = new Request.Builder()
+//                .url(url)
+//                .header("apikey", BAIDU_API_KEY)
+//                .build();
+//        enqueue(request, responseCallback);
+
+        String url = "http://apis.baidu.com/thinkpage/weather_api/suggestion?location=" + cityName;
         Request request = new Request.Builder()
                 .url(url)
                 .header("apikey", BAIDU_API_KEY)

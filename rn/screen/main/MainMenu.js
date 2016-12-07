@@ -15,6 +15,7 @@ import InteractionManager from 'InteractionManager';
 import Dimensions from 'Dimensions';
 
 import WebScreen from '../WebScreen.js';
+import LoginScreen from '../LoginScreen.js';
 
 import PButton from '../../components/PButton.js';
 import PColor from '../../utils/PColor.js';
@@ -29,6 +30,7 @@ export default class MainMenu extends React.Component {
         this.renderHeaderImg = this.renderHeaderImg.bind(this);
         this._onFindPwdPress = this._onFindPwdPress.bind(this)
         this._onExitPress = this._onExitPress.bind(this)
+        this._onChangeUser = this._onChangeUser.bind(this);
         this.state = {
             phone: '',
             headImgUrl: ''
@@ -66,6 +68,15 @@ export default class MainMenu extends React.Component {
                     backgroundColorPressed={PColor.white}
                     onPress={this._onFindPwdPress}
                     />
+                <PButton
+                    style={styles.button}
+                    content={'切换账号'}
+                    textColor={PColor.black}
+                    textColorPressed={PColor.black}
+                    backgroundColor={PColor.white}
+                    backgroundColorPressed={PColor.light}
+                    onPress={this._onChangeUser}
+                    />
 
                 <PButton
                     style={styles.button}
@@ -101,6 +112,13 @@ export default class MainMenu extends React.Component {
                 title: '忘记密码',
                 url: url
             }
+        })
+    }
+
+    _onChangeUser() {
+        this.props.navigator.resetTo({
+            name: 'LoginScreen',
+            component: LoginScreen,
         })
     }
 

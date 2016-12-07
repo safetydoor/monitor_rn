@@ -5,6 +5,7 @@ import android.content.Intent;
 import com.amenuo.monitor.action.LoginStateAction;
 import com.amenuo.monitor.action.WXAction;
 import com.amenuo.monitor.activity.LivePlayerActivity;
+import com.amenuo.monitor.model.PWeatherModel;
 import com.amenuo.monitor.model.WeatherModel;
 import com.amenuo.monitor.task.LoginTask;
 import com.amenuo.monitor.task.RegisterTask;
@@ -143,7 +144,8 @@ public class NativeInterface extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void getWeather(final Promise promise) {
-        HttpRequest.requestWeather("天津", new okhttp3.Callback() {
+        final String city = "天津";
+        HttpRequest.requestWeather(city, new okhttp3.Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
                 promise.reject("01", "天气获取失败");
@@ -152,15 +154,14 @@ public class NativeInterface extends ReactContextBaseJavaModule {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 String json = response.body().string();
-                final WeatherModel weatherModel = WeatherModel.jsonToModel(json);
+                final PWeatherModel weatherModel = PWeatherModel.jsonToModel(json);
                 if (weatherModel == null) {
                     promise.reject("01", "天气获取失败");
                 } else {
                     WritableMap map = Arguments.createMap();
                     map.putString("code", "00");
                     map.putString("message", "天气获取成功");
-                    map.putString("date", weatherModel.getDate());
-                    map.putString("city", weatherModel.getCity());
+                    map.putString("city", city);
                     map.putString("temp", weatherModel.getTemp());
                     map.putString("weather", weatherModel.getWeather());
                     map.putString("l_temp", weatherModel.getL_tmp());

@@ -62,7 +62,7 @@ export default class MainScreen extends React.Component {
 
     _onBackPress() {
         let nowTime = new Date().getTime();
-        if (nowTime - this.lastBackTime > 1000) {
+        if (nowTime - this.lastBackTime > 1500) {
             this.backTimes = 0;
         }
         this.backTimes = this.backTimes + 1;
