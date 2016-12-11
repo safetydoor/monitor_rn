@@ -15,6 +15,10 @@ export default class Interface {
         NativeInterface.hideLoading();
     }
 
+    static showToast(message) {
+        NativeInterface.showToast(message);
+    }
+
     static jumpToCamera() {
         NativeInterface.jumpToCamera();
     }

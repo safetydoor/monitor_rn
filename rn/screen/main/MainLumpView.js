@@ -30,7 +30,6 @@ export default class MainLumpView extends React.Component {
                         resizeMode={'stretch'}
                         source={this.props.bg}
                         />
-                    <Text style={styles.title}>{this.props.title}</Text>
                 </View>
             </TouchableOpacity>
         );
@@ -47,8 +46,5 @@ const styles = StyleSheet.create({
     bg: {
         width: 165,
         height: 94,
-        position: 'absolute',
-        top: 0,
-        left: 0,
     },
 });

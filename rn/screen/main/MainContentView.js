@@ -70,8 +70,16 @@ export default class MainContentView extends React.Component {
 
     componentDidMount() {
         Interface.showLoading();
-        Interface.getWeather().then((result)=> {
-            this.weather = result;
+        PHttpUtils.requestWeather().then((response)=> {
+            return response.json();
+        }).then((responseData)=> {
+            this.weather = {
+                'city': $op(responseData).getString('results.0.location.name'),
+                'temp': $op(responseData).getString('results.0.daily.0.high'),
+                'weather': $op(responseData).getString('results.0.daily.0.text_day'),
+                'l_temp': $op(responseData).getString('results.0.daily.0.low'),
+                'h_temp': $op(responseData).getString('results.0.daily.0.high'),
+            };
             return PHttpUtils.requestCategory();
         }).then((response)=> {
             return response.json()
@@ -164,7 +172,7 @@ export default class MainContentView extends React.Component {
     renderHeader() {
         let size = {
             width: (width - 45) / 2,
-            height: 94,
+            height: 0.56 * (width - 45) / 2,
         };
         let tabs = [];
         for (let item of this.category) {

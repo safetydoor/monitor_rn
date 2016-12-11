@@ -11,7 +11,7 @@ import View from 'View';
 import Text from 'Text';
 import Image from 'Image';
 import TouchableOpacity from 'TouchableOpacity';
-
+import Platform from 'Platform';
 import PColor from '../utils/PColor.js';
 
 export default class PTitleBar extends React.Component {
@@ -25,15 +25,23 @@ export default class PTitleBar extends React.Component {
     }
 
     render() {
+        let height = 50;
+        let paddingTop = 0;
+        if (Platform.OS === 'ios') {
+            height = 70;
+            paddingTop = 20;
+        }
         return (
-            <View style={[styles.root, this.props.style]}>
-                <TouchableOpacity onPress={this._onLeftPress} style={styles.left}>
-                    <View>
-                        {this.renderLeftIcon()}
-                        {this.renderLeftText()}
-                    </View>
-                </TouchableOpacity>
-                <Text style={styles.title} numberOfLines={1}>{this.props.title}</Text>
+            <View style={{height: height,backgroundColor: PColor.white, paddingTop: paddingTop}}>
+                <View style={[styles.root, this.props.style]}>
+                    <TouchableOpacity onPress={this._onLeftPress} style={styles.left}>
+                        <View>
+                            {this.renderLeftIcon()}
+                            {this.renderLeftText()}
+                        </View>
+                    </TouchableOpacity>
+                    <Text style={styles.title} numberOfLines={1}>{this.props.title}</Text>
+                </View>
             </View>
         );
     }
@@ -57,7 +65,7 @@ export default class PTitleBar extends React.Component {
     _onLeftPress() {
         if (this.props.onLeftPress) {
             this.props.onLeftPress();
-        } else if(this.props.navigator){
+        } else if (this.props.navigator) {
             this.props.navigator.pop();
         }
     }
@@ -71,7 +79,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         height: 50,
         backgroundColor: PColor.white,
-        borderBottomWidth : 1,
+        borderBottomWidth: 1,
         borderColor: PColor.light,
     },
 

@@ -37,6 +37,7 @@ export default class RegisterScreen extends React.Component {
         this._onPress = this._onPress.bind(this);
         this._onRegisterPress = this._onRegisterPress.bind(this);
         this._onCodePress = this._onCodePress.bind(this);
+        this._onLoginPress = this._onLoginPress.bind(this);
 
         this._onPhoneChangeText = this._onPhoneChangeText.bind(this);
         this._onCodeChangeText = this._onCodeChangeText.bind(this);
@@ -77,6 +78,15 @@ export default class RegisterScreen extends React.Component {
                             backgroundColor={PColor.blue}
                             backgroundColorPressed={PColor.blue_press}
                             content={'注册'}/>
+
+                        <PButton
+                            style={styles.registerBtn}
+                            onPress={this._onLoginPress}
+                            textColor={PColor.white}
+                            textColorPressed={PColor.white}
+                            backgroundColor={PColor.blue}
+                            backgroundColorPressed={PColor.blue_press}
+                            content={'去登陆页面'}/>
                     </View>
                 </View>
             </TouchableWithoutFeedback>
@@ -195,6 +205,10 @@ export default class RegisterScreen extends React.Component {
         })
     }
 
+    _onLoginPress() {
+        this.props.navigator.pop();
+    }
+
     _onPhoneChangeText(text) {
         this.phoneNumber = text;
     }
@@ -268,8 +282,11 @@ const styles = StyleSheet.create({
         marginTop: 40,
         marginBottom: 40,
     },
-    input: {},
+    input: {
+
+    },
     codeInputContainer: {
+        marginTop: 5,
         flex: 1,
         flexDirection: 'row',
         height: 50,

@@ -21,21 +21,24 @@ export default class PTextInput extends React.Component {
 
     render() {
         return (
-            <View style={[styles.root, this.props.style]}>
-                <Image
-                    style={styles.icon}
-                    source={this.props.icon}/>
-                <TextInput
-                    style={[styles.input, {color:this.props.color}]}
-                    underlineColorAndroid={this.props.lineColor}
-                    keyboardType={this.props.keyboardType}
-                    onBlur={this.props.onBlur}
-                    onChangeText={this.props.onChangeText}
-                    onFocus={this.props.onFocus}
-                    placeholder={this.props.placeholder}
-                    placeholderTextColor={this.props.placeholderTextColor}
-                    secureTextEntry={this.props.secureTextEntry}
-                    />
+            <View style={this.props.style}>
+                <View style={[styles.root, this.props.style]}>
+                    <Image
+                        style={styles.icon}
+                        source={this.props.icon}/>
+                    <TextInput
+                        style={[styles.input, {color:this.props.color}]}
+                        underlineColorAndroid={this.props.lineColor}
+                        keyboardType={this.props.keyboardType}
+                        onBlur={this.props.onBlur}
+                        onChangeText={this.props.onChangeText}
+                        onFocus={this.props.onFocus}
+                        placeholder={this.props.placeholder}
+                        placeholderTextColor={this.props.placeholderTextColor}
+                        secureTextEntry={this.props.secureTextEntry}
+                        />
+                </View>
+                <View style={{flex:1,height:1,backgroundColor:this.props.lineColor }}/>
             </View>
         );
     }

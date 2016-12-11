@@ -168,11 +168,11 @@ export default class LoginScreen extends React.Component {
         }
         Interface.showLoading();
         Interface.login(this.phoneNumber, this.password).then((result)=> {
+            Interface.hideLoading();
             this.props.navigator.replace({
                 name: 'Main',
                 component: MainScreen,
             });
-            Interface.hideLoading();
         }).catch((error)=>{
             Interface.hideLoading();
             PToast.show(error.message);
@@ -222,7 +222,9 @@ const styles = StyleSheet.create({
         marginTop: 40,
         marginBottom: 40,
     },
-    input: {},
+    input: {
+        marginTop: 5,
+    },
     forgetPwd: {
         alignSelf: 'flex-end',
         marginTop: 20,

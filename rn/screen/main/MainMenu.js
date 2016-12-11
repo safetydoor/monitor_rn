@@ -13,7 +13,7 @@ import Image from 'Image';
 import BackAndroid from 'BackAndroid';
 import InteractionManager from 'InteractionManager';
 import Dimensions from 'Dimensions';
-
+import Platform from 'Platform';
 import WebScreen from '../WebScreen.js';
 import LoginScreen from '../LoginScreen.js';
 
@@ -77,7 +77,15 @@ export default class MainMenu extends React.Component {
                     backgroundColorPressed={PColor.light}
                     onPress={this._onChangeUser}
                     />
+                {this.renderExitButton()}
+            </View>
+        );
+    }
 
+    renderExitButton() {
+        let isAndroid = (Platform.OS !== 'ios');
+        if (isAndroid) {
+            return (
                 <PButton
                     style={styles.button}
                     content={'退出'}
@@ -87,8 +95,8 @@ export default class MainMenu extends React.Component {
                     backgroundColorPressed={PColor.light}
                     onPress={this._onExitPress}
                     />
-            </View>
-        );
+            )
+        }
     }
 
     renderHeaderImg() {
