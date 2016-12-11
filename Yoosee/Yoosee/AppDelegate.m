@@ -198,46 +198,46 @@
     rootViewController.view = rootView;
     self.window.rootViewController = rootViewController;
     
-//    if([UDManager isLogin]){
-//        
-//        MainController *mainController = [[MainController alloc] init];
-//        self.mainController = mainController;
-//        
-////        NSString *lacalFlag = [[NSUserDefaults standardUserDefaults] objectForKey:@"AppStartInfoFlag"];
-////        if (!lacalFlag) {//first launching app(其实没必要判断，第一次只在进入登录界面时发生)
-//            self.window.rootViewController = self.mainController;
-////        }else{
-////            self.window.rootViewController = [[[LaunchImageTransition alloc] initWithViewController:self.mainController animation:UIModalTransitionStyleCrossDissolve] autorelease];
-////        }
-//        [mainController release];
-//        
-//        LoginResult *loginResult = [UDManager getLoginInfo];
-//        [[NetManager sharedManager] getAccountInfo:loginResult.contactId sessionId:loginResult.sessionId callBack:^(id JSON){
-//            
-//            AccountResult *accountResult = (AccountResult*)JSON;
-//            if(accountResult.error_code==NET_RET_GET_ACCOUNT_SUCCESS){
-//                loginResult.email = accountResult.email;
-//                loginResult.phone = accountResult.phone;
-//                loginResult.countryCode = accountResult.countryCode;
-//                [UDManager setLoginInfo:loginResult];
-//            }
-//            
-//        }];
-//    }else{
-//        LoginController *loginController = [[LoginController alloc] init];
-//        AutoNavigation *mainController = [[AutoNavigation alloc] initWithRootViewController:loginController];
-//        
-////        NSString *lacalFlag = [[NSUserDefaults standardUserDefaults] objectForKey:@"AppStartInfoFlag"];
-////        if (!lacalFlag) {//first launching app
-//            self.window.rootViewController = mainController;
-////        }else{
-////            self.window.rootViewController = [[[LaunchImageTransition alloc] initWithViewController:mainController animation:UIModalTransitionStyleCrossDissolve] autorelease];
-////        }
-//        
-//        [loginController release];
-//        [mainController release];
-//    }
-//
+    if([UDManager isLogin]){
+        
+        MainController *mainController = [[MainController alloc] init];
+        //self.mainController = mainController;
+        
+//        NSString *lacalFlag = [[NSUserDefaults standardUserDefaults] objectForKey:@"AppStartInfoFlag"];
+//        if (!lacalFlag) {//first launching app(其实没必要判断，第一次只在进入登录界面时发生)
+            //self.window.rootViewController = self.mainController;
+//        }else{
+//            self.window.rootViewController = [[[LaunchImageTransition alloc] initWithViewController:self.mainController animation:UIModalTransitionStyleCrossDissolve] autorelease];
+//        }
+        [mainController release];
+        
+        LoginResult *loginResult = [UDManager getLoginInfo];
+        [[NetManager sharedManager] getAccountInfo:loginResult.contactId sessionId:loginResult.sessionId callBack:^(id JSON){
+            
+            AccountResult *accountResult = (AccountResult*)JSON;
+            if(accountResult.error_code==NET_RET_GET_ACCOUNT_SUCCESS){
+                loginResult.email = accountResult.email;
+                loginResult.phone = accountResult.phone;
+                loginResult.countryCode = accountResult.countryCode;
+                [UDManager setLoginInfo:loginResult];
+            }
+            
+        }];
+    }else{
+        LoginController *loginController = [[LoginController alloc] init];
+        AutoNavigation *mainController = [[AutoNavigation alloc] initWithRootViewController:loginController];
+        
+//        NSString *lacalFlag = [[NSUserDefaults standardUserDefaults] objectForKey:@"AppStartInfoFlag"];
+//        if (!lacalFlag) {//first launching app
+            //self.window.rootViewController = mainController;
+//        }else{
+//            self.window.rootViewController = [[[LaunchImageTransition alloc] initWithViewController:mainController animation:UIModalTransitionStyleCrossDissolve] autorelease];
+//        }
+        
+        [loginController release];
+        [mainController release];
+    }
+
     [self.window makeKeyAndVisible];
     [[UDPManager sharedDefault] ScanLanDevice];
 

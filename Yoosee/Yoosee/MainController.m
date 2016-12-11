@@ -64,21 +64,24 @@
     if(result){
         DLog(@"p2pConnect success.");
     }else{//new added
-        [UDManager setIsLogin:NO];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [UDManager setIsLogin:NO];
+            
+            //[[GlobalThread sharedThread:NO] kill];//在contactController里创建
+            [[FListManager sharedFList] setIsReloadData:YES];
+            [[UIApplication sharedApplication] unregisterForRemoteNotifications];
+            LoginController *loginController = [[LoginController alloc] init];
+            loginController.isP2PVerifyCodeError = YES;
+            AutoNavigation *mainController = [[AutoNavigation alloc] initWithRootViewController:loginController];
+            
+            [AppDelegate sharedDefault].window.rootViewController = mainController;
+            [loginController release];
+            [mainController release];
+            
+            //APP将返回登录界面时，注册新的token，登录时传给服务器
+            [[AppDelegate sharedDefault] reRegisterForRemoteNotifications];
+        });
         
-        //[[GlobalThread sharedThread:NO] kill];//在contactController里创建
-        [[FListManager sharedFList] setIsReloadData:YES];
-        [[UIApplication sharedApplication] unregisterForRemoteNotifications];
-        LoginController *loginController = [[LoginController alloc] init];
-        loginController.isP2PVerifyCodeError = YES;
-        AutoNavigation *mainController = [[AutoNavigation alloc] initWithRootViewController:loginController];
-        
-        [AppDelegate sharedDefault].window.rootViewController = mainController;
-        [loginController release];
-        [mainController release];
-        
-        //APP将返回登录界面时，注册新的token，登录时传给服务器
-        [[AppDelegate sharedDefault] reRegisterForRemoteNotifications];
         
         DLog(@"p2pConnect failure.");
         return;

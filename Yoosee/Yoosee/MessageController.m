@@ -361,6 +361,10 @@
     }];
 }
 
+-(void)onBackPress{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 -(void)initComponent{
     //显示server OR local的alarmRecords(.plist)
     NSString * plist = [[NSBundle mainBundle] pathForResource:@"Common-Configuration" ofType:@"plist"];
@@ -382,7 +386,8 @@
     }
     [topBar setRightButtonIcon:[UIImage imageNamed:@"ic_bar_btn_clear.png"]];
     [topBar.rightButton addTarget:self action:@selector(clearPress) forControlEvents:UIControlEventTouchUpInside];
-    
+    [topBar setBackButtonHidden:NO];
+    [topBar.backButton addTarget:self action:@selector(onBackPress) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:topBar];
     self.topBar = topBar;
     [topBar release];

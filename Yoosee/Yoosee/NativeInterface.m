@@ -13,10 +13,48 @@
 #import "NetManager.h"
 #import "LoginResult.h"
 #import "RegisterResult.h"
+#import "AccountResult.h"
+#import "MainController.h"
+#import "LoginController.h"
+#import "AutoNavigation.h"
 
 @implementation NativeInterface
 
 RCT_EXPORT_MODULE(NativeInterface);
+
+RCT_EXPORT_METHOD(jumpToCamera)
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIViewController *controller = [self getCurrentVC];
+        if (controller == nil) {
+            [self toast:@"打开出错"];
+            return;
+        }
+        if([UDManager isLogin]){
+            
+            MainController *mainController = [[MainController alloc] init];
+            
+            LoginResult *loginResult = [UDManager getLoginInfo];
+            [[NetManager sharedManager] getAccountInfo:loginResult.contactId sessionId:loginResult.sessionId callBack:^(id JSON){
+                
+                AccountResult *accountResult = (AccountResult*)JSON;
+                if(accountResult.error_code==NET_RET_GET_ACCOUNT_SUCCESS){
+                    loginResult.email = accountResult.email;
+                    loginResult.phone = accountResult.phone;
+                    loginResult.countryCode = accountResult.countryCode;
+                    [UDManager setLoginInfo:loginResult];
+                }
+                
+            }];
+            [controller presentViewController:mainController animated:YES completion:nil];
+        }else{
+            LoginController *loginController = [[LoginController alloc] init];
+            AutoNavigation *mainController = [[AutoNavigation alloc] initWithRootViewController:loginController];
+            [controller presentViewController:mainController animated:YES completion:nil];
+        }
+    });
+    
+}
 
 RCT_EXPORT_METHOD(showLoading)
 {

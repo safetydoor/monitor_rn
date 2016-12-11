@@ -381,7 +381,7 @@
 		25FFFC4519AF2AA0007C8C79 /* rscode.c in Sources */ = {isa = PBXBuildFile; fileRef = 25FFFC3C19AF2AA0007C8C79 /* rscode.c */; };
 		25FFFC4619AF2AA0007C8C79 /* split.c in Sources */ = {isa = PBXBuildFile; fileRef = 25FFFC3E19AF2AA0007C8C79 /* split.c */; };
 		25FFFC4919AF2AAE007C8C79 /* QRCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FFFC4819AF2AAE007C8C79 /* QRCodeGenerator.m */; };
-		3E64B36E1DFC08CC009DB84A /* NativeInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E64B36D1DFC08CC009DB84A /* NativeInterface.m */; };
+		3E64B36E1DFC08CC009DB84A /* NativeInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E64B36D1DFC08CC009DB84A /* NativeInterface.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		5C08125E1CA0ECF300AD89C6 /* monitor_sound_off_h.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C08125C1CA0ECF300AD89C6 /* monitor_sound_off_h.png */; };
 		5C08125F1CA0ECF300AD89C6 /* monitor_sound_on_h.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C08125D1CA0ECF300AD89C6 /* monitor_sound_on_h.png */; };
 		5C0812611CA0F59C00AD89C6 /* monitor_switch_screen_img_h.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C0812601CA0F59C00AD89C6 /* monitor_switch_screen_img_h.png */; };

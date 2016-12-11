@@ -172,6 +172,13 @@
 #define EMPTY_BUTTON_HEIGHT 42
 #define EMPTY_LABEL_WIDTH 260
 #define EMPTY_LABEL_HEIGHT 50
+
+-(void)onBackPress{
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 -(void)initComponent{
  
     //view的背景色
@@ -188,8 +195,10 @@
     TopBar *topBar = [[TopBar alloc] initWithFrame:CGRectMake(0, 0, width, NAVIGATION_BAR_HEIGHT)];
     [topBar setTitle:NSLocalizedString(@"contact",nil)];
     [topBar setRightButtonHidden:NO];
+    [topBar setBackButtonHidden:NO];
     [topBar setRightButtonIcon:[UIImage imageNamed:@"ic_bar_btn_add_contact.png"]];
     [topBar.rightButton addTarget:self action:@selector(onAddPress) forControlEvents:UIControlEventTouchUpInside];
+    [topBar.backButton addTarget:self action:@selector(onBackPress) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:topBar];
     self.topBar = topBar;
     [topBar release];
