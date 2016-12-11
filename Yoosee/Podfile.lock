@@ -5,6 +5,8 @@ PODS:
   - React/RCTImage (0.34.0):
     - React/Core
     - React/RCTNetwork
+  - React/RCTLinkingIOS (0.34.0):
+    - React/Core
   - React/RCTNetwork (0.34.0):
     - React/Core
   - React/RCTText (0.34.0):
@@ -16,6 +18,7 @@ DEPENDENCIES:
   - React/Core (from `../rn/node_modules/react-native`)
   - React/RCTActionSheet (from `../rn/node_modules/react-native`)
   - React/RCTImage (from `../rn/node_modules/react-native`)
+  - React/RCTLinkingIOS (from `../rn/node_modules/react-native`)
   - React/RCTNetwork (from `../rn/node_modules/react-native`)
   - React/RCTText (from `../rn/node_modules/react-native`)
   - React/RCTWebSocket (from `../rn/node_modules/react-native`)
@@ -27,6 +30,6 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   React: 2e2e1e59f9854460b8a688645ef4cc24d5a2dd32
 
-PODFILE CHECKSUM: 5836c53cb92e56bcce15620f6c531f77358a76f6
+PODFILE CHECKSUM: e48ea6898cc1ffd30942e1af50e0cc96465f05a3
 
 COCOAPODS: 1.1.1

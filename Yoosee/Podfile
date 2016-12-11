@@ -11,6 +11,7 @@ target 'Yoosee' do
     'RCTNetwork',
     'RCTWebSocket',
     'RCTActionSheet',
+    'RCTLinkingIOS',
     # Add any other subspecs you want to use in your project
   ]
 
