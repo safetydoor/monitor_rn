@@ -3,6 +3,9 @@
  */
 
 import { NativeModules } from 'react-native';
+import Platform from 'Platform';
+import WebScreen from '../screen/WebScreen.js';
+import Linking from 'Linking';
 const NativeInterface = NativeModules.NativeInterface;
 
 export default class Interface {
@@ -24,7 +27,17 @@ export default class Interface {
     }
 
     static jumpToLivePlay(options) {
-        NativeInterface.jumpToLivePlay(options);
+        if (Platform.OS === 'ios') {
+            Linking.canOpenURL(options.address).then(supported => {
+                if (!supported) {
+                    console.log('不能打开地址: ' + url);
+                } else {
+                    return Linking.openURL(options.address);
+                }
+            }).catch(err => console.log('An error occurred', err));
+        } else {
+            NativeInterface.jumpToLivePlay(options);
+        }
     }
 
     static jumpToWXLogin() {
@@ -60,7 +73,7 @@ export default class Interface {
         return NativeInterface.getCode(phone);
     }
 
-    static async getWeather(): Promise {
+    static async getWeather():Promise {
         return NativeInterface.getWeather();
     }
 }
