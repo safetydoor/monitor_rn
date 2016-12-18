@@ -13,7 +13,7 @@ import TextInput from 'TextInput';
 import Dimensions from 'Dimensions';
 import TouchableWithoutFeedback from 'TouchableWithoutFeedback';
 import BackAndroid from 'BackAndroid';
-
+import Platform from 'Platform';
 import PColor from '../utils/PColor.js';
 import PTextInput from '../components/PTextInput.js';
 import PButton from '../components/PButton.js';
@@ -35,6 +35,7 @@ export default class LoginScreen extends React.Component {
         this.renderPhoneInput = this.renderPhoneInput.bind(this);
         this.renderPwdInput = this.renderPwdInput.bind(this);
         this.renderDivider = this.renderDivider.bind(this);
+        this.renderWXButton = this.renderWXButton.bind(this);
 
         this._onPress = this._onPress.bind(this);
         this._onForgetPwdPress = this._onForgetPwdPress.bind(this);
@@ -79,18 +80,26 @@ export default class LoginScreen extends React.Component {
                             content={'登陆'}/>
                         <Text style={styles.register} onPress={this._onRegisterPress}>创建账号</Text>
                         {this.renderDivider()}
-                        <PButton
-                            style={styles.wxLoginBtn}
-                            onPress={this._onWXLoginPress}
-                            textColor={PColor.black}
-                            textColorPressed={PColor.black}
-                            backgroundColor={PColor.white}
-                            backgroundColorPressed={PColor.light}
-                            content={'微信账号登陆'}/>
+                        {this.renderWXButton()}
                     </View>
                 </View>
             </TouchableWithoutFeedback>
         );
+    }
+
+    renderWXButton() {
+        if (Platform.OS !== 'ios') {
+            return (
+                <PButton
+                style={styles.wxLoginBtn}
+                onPress={this._onWXLoginPress}
+                textColor={PColor.black}
+                textColorPressed={PColor.black}
+                backgroundColor={PColor.white}
+                backgroundColorPressed={PColor.light}
+                content={'微信账号登陆'}/>
+            )
+        }
     }
 
     renderPhoneInput() {
@@ -124,13 +133,15 @@ export default class LoginScreen extends React.Component {
     }
 
     renderDivider() {
-        return (
-            <View style={styles.dividerContainer}>
-                <View style={styles.dividerLine}/>
-                <Text style={styles.dividerText}>OR</Text>
-                <View style={styles.dividerLine}/>
-            </View>
-        );
+        if (Platform.OS !== 'ios') {
+            return (
+                <View style={styles.dividerContainer}>
+                    <View style={styles.dividerLine}/>
+                    <Text style={styles.dividerText}>OR</Text>
+                    <View style={styles.dividerLine}/>
+                </View>
+            );
+        }
     }
 
     _onPress() {
