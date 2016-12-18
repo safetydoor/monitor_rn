@@ -106,6 +106,11 @@
     self.isShowingMonitorController = NO;
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [[P2PClient sharedClient] p2pDisconnect];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
