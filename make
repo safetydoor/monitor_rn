@@ -23,4 +23,5 @@ iOS Debug方式
 5，如果是真机的话，需要按照android debug步骤5进行设置。
 
 iOS 打包:
-TODO
+1，cd到项目rn目录下，执行命令：
+react-native bundle --platform ios     --dev false --entry-file index.ios.js     --bundle-output ../Yoosee/bundle/index.ios.jsbundle  --assets-dest ../Yoosee/bundle 

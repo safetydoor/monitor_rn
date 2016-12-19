@@ -29,6 +29,7 @@
 #import "WebViewController.h"
 #import "ContactDAO.h"
 #import "Contact.h"
+#import "RNMainViewController.h"
 
 #define ALERT_TAG_CLEAR 1
 #define HEADVIEW_HEIGHT 40
@@ -362,7 +363,9 @@
 }
 
 -(void)onBackPress{
-    [self dismissViewControllerAnimated:YES completion:nil];
+//    [self dismissViewControllerAnimated:YES completion:nil];
+    RNMainViewController *mainController = [[[RNMainViewController alloc] init] autorelease];
+    self.view.window.rootViewController = mainController;
 }
 
 -(void)initComponent{

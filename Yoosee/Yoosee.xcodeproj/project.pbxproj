@@ -382,6 +382,10 @@
 		25FFFC4619AF2AA0007C8C79 /* split.c in Sources */ = {isa = PBXBuildFile; fileRef = 25FFFC3E19AF2AA0007C8C79 /* split.c */; };
 		25FFFC4919AF2AAE007C8C79 /* QRCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FFFC4819AF2AAE007C8C79 /* QRCodeGenerator.m */; };
 		3E64B36E1DFC08CC009DB84A /* NativeInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E64B36D1DFC08CC009DB84A /* NativeInterface.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		3EC8B3DF1E0820FD00E20DB5 /* index.ios.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 3EC8B3C71E0820FD00E20DB5 /* index.ios.jsbundle */; };
+		3EC8B3E01E0820FD00E20DB5 /* index.ios.jsbundle.meta in Resources */ = {isa = PBXBuildFile; fileRef = 3EC8B3C81E0820FD00E20DB5 /* index.ios.jsbundle.meta */; };
+		3EC8B4421E0827F400E20DB5 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 3EC8B4411E0827F400E20DB5 /* assets */; };
+		3EC8B4451E083A1200E20DB5 /* RNMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC8B4441E083A1200E20DB5 /* RNMainViewController.m */; };
 		5C08125E1CA0ECF300AD89C6 /* monitor_sound_off_h.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C08125C1CA0ECF300AD89C6 /* monitor_sound_off_h.png */; };
 		5C08125F1CA0ECF300AD89C6 /* monitor_sound_on_h.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C08125D1CA0ECF300AD89C6 /* monitor_sound_on_h.png */; };
 		5C0812611CA0F59C00AD89C6 /* monitor_switch_screen_img_h.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C0812601CA0F59C00AD89C6 /* monitor_switch_screen_img_h.png */; };
@@ -1126,6 +1130,11 @@
 		25FFFC4819AF2AAE007C8C79 /* QRCodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeGenerator.m; sourceTree = "<group>"; };
 		3E64B36C1DFC08CC009DB84A /* NativeInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeInterface.h; sourceTree = "<group>"; };
 		3E64B36D1DFC08CC009DB84A /* NativeInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeInterface.m; sourceTree = "<group>"; };
+		3EC8B3C71E0820FD00E20DB5 /* index.ios.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = index.ios.jsbundle; sourceTree = "<group>"; };
+		3EC8B3C81E0820FD00E20DB5 /* index.ios.jsbundle.meta */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = index.ios.jsbundle.meta; sourceTree = "<group>"; };
+		3EC8B4411E0827F400E20DB5 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
+		3EC8B4431E083A1200E20DB5 /* RNMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNMainViewController.h; sourceTree = "<group>"; };
+		3EC8B4441E083A1200E20DB5 /* RNMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNMainViewController.m; sourceTree = "<group>"; };
 		445AB02E36ABA95EB59EA80F /* libPods-Yoosee.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Yoosee.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4912CFC773E64C9BB25C832A /* Pods-Yoosee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yoosee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yoosee/Pods-Yoosee.debug.xcconfig"; sourceTree = "<group>"; };
 		5C08125C1CA0ECF300AD89C6 /* monitor_sound_off_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monitor_sound_off_h.png; sourceTree = "<group>"; };
@@ -1528,6 +1537,7 @@
 		2583C56F18DAE9E000480FA7 = {
 			isa = PBXGroup;
 			children = (
+				3EC8B3A81E0820FC00E20DB5 /* bundle */,
 				2583C58118DAE9E100480FA7 /* Yoosee */,
 				2583C59A18DAE9E100480FA7 /* YooseeTests */,
 				2583C57A18DAE9E000480FA7 /* Frameworks */,
@@ -1707,6 +1717,8 @@
 				0324C3A21BBBE23A007248AA /* ContactController_ap.m */,
 				0349FCB51BCF83DA0070D354 /* ContactController_password_ap.h */,
 				0349FCB61BCF83DA0070D354 /* ContactController_password_ap.m */,
+				3EC8B4431E083A1200E20DB5 /* RNMainViewController.h */,
+				3EC8B4441E083A1200E20DB5 /* RNMainViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -2392,6 +2404,16 @@
 			name = libqrencode;
 			sourceTree = "<group>";
 		};
+		3EC8B3A81E0820FC00E20DB5 /* bundle */ = {
+			isa = PBXGroup;
+			children = (
+				3EC8B4411E0827F400E20DB5 /* assets */,
+				3EC8B3C71E0820FD00E20DB5 /* index.ios.jsbundle */,
+				3EC8B3C81E0820FD00E20DB5 /* index.ios.jsbundle.meta */,
+			);
+			path = bundle;
+			sourceTree = "<group>";
+		};
 		5CDE8BB81CABAD28007FCBB8 /* MyPickerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -2748,6 +2770,7 @@
 				A1A9AE1F1AF11A78003EAA0C /* ic_ctl_lock_on.png in Resources */,
 				25DDB7C418F7D82F0030F1D3 /* ic_tab_item_discover_p.png in Resources */,
 				25DB88A518E016B500BA3037 /* bg_keyboard_input_bar.png in Resources */,
+				3EC8B3DF1E0820FD00E20DB5 /* index.ios.jsbundle in Resources */,
 				5CEC6EB01C9AC82400ACE28E /* ic_defence_on.png in Resources */,
 				A9301A591C22A4B1008C6E0F /* ic_operator_item_playback_unknown_type.png in Resources */,
 				25E4327518FCFAAA00508B06 /* bg_operator_bar_arrow_top.png in Resources */,
@@ -2957,6 +2980,7 @@
 				A1472CF71AB03D8E00EB704E /* img_waiting_set_wifi01.png in Resources */,
 				A9301A541C22A4B1008C6E0F /* ic_operator_item_control_unknown_type.png in Resources */,
 				25E0DBFF18F8D37F0046AF56 /* bg_tab_item_p.png in Resources */,
+				3EC8B4421E0827F400E20DB5 /* assets in Resources */,
 				257F75881980D4C30075D7F4 /* ic_infrared_top.png in Resources */,
 				5CEC6EB81C9AE72700ACE28E /* ic_operator_item_modify.png in Resources */,
 				5C0812611CA0F59C00AD89C6 /* monitor_switch_screen_img_h.png in Resources */,
@@ -3021,6 +3045,7 @@
 				A92DC27F1B4687FB007A76E5 /* down_line.png in Resources */,
 				25D0B2E018ED524700B285FA /* bg_bar_btn.png in Resources */,
 				25D50906192A0AF400DE6178 /* ic_ctl_media.png in Resources */,
+				3EC8B3E01E0820FD00E20DB5 /* index.ios.jsbundle.meta in Resources */,
 				A9301A511C22A4B1008C6E0F /* ic_operator_item_chat_p.png in Resources */,
 				25DB888518E0006E00BA3037 /* separator_vertical.png in Resources */,
 				25EEEFE918E51B1A004B262C /* btn_stop_defence.png in Resources */,
@@ -3243,6 +3268,7 @@
 				A1FE29A11A1197290094EAC6 /* MJRefreshHeaderView.m in Sources */,
 				A1472CD81AB0329B00EB704E /* QRCodeGuardFirst.m in Sources */,
 				0349FCB71BCF83DB0070D354 /* ContactController_password_ap.m in Sources */,
+				3EC8B4451E083A1200E20DB5 /* RNMainViewController.m in Sources */,
 				25FF3726192B212100DACFE5 /* P2PDefenceAreaCell.m in Sources */,
 				A113ED711A679D890070452B /* MessageController.m in Sources */,
 				25D9C71019233F7B00579106 /* P2PVideoFormatSettingCell.m in Sources */,

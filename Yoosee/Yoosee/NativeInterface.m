@@ -46,7 +46,8 @@ RCT_EXPORT_METHOD(jumpToCamera)
                 }
                 
             }];
-            [controller presentViewController:mainController animated:YES completion:nil];
+            controller.view.window.rootViewController = mainController;
+            [[AppDelegate sharedDefault] setMainController:mainController];
         }else{
             LoginController *loginController = [[LoginController alloc] init];
             AutoNavigation *mainController = [[AutoNavigation alloc] initWithRootViewController:loginController];

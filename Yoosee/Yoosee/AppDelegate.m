@@ -37,8 +37,7 @@
 #import "UDPManager.h"
 #import "PAIOUnit.h"//rtsp监控界面弹出修改
 #import "MD5Manager.h"
-#import "RCTBundleURLProvider.h"
-#import "RCTRootView.h"
+#import "RNMainViewController.h"
 
 @implementation AppDelegate{
     UIAlertView *_alarmAlertView;
@@ -186,17 +185,9 @@
 
     NSURL *jsCodeLocation;
     
-    jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
     
-    RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
-                                                        moduleName:@"monitor"
-                                                 initialProperties:nil
-                                                     launchOptions:launchOptions];
-    rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    UIViewController *rootViewController = [UIViewController new];
-    rootViewController.view = rootView;
-    self.window.rootViewController = rootViewController;
+    self.window.rootViewController = [[[RNMainViewController alloc] init] autorelease];
     
     if([UDManager isLogin]){
         

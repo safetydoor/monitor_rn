@@ -38,6 +38,8 @@
 #import "Utils.h"
 #import "ModifyDevicePasswordController.h"//设备列表界面调整
 #import "MBProgressHUD.h"//设备检查更新
+#import "RNMainViewController.h"
+
 @interface ContactController ()
 {
     BOOL _isCancelUpdateDeviceOk;
@@ -174,8 +176,9 @@
 #define EMPTY_LABEL_HEIGHT 50
 
 -(void)onBackPress{
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
+//    [self dismissViewControllerAnimated:YES completion:nil];
+    RNMainViewController *mainController = [[[RNMainViewController alloc] init] autorelease];
+    self.view.window.rootViewController = mainController;
 }
 
 

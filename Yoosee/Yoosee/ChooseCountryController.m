@@ -54,14 +54,15 @@
     
     NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
     DLog("%@",language);
-    if([language hasPrefix:@"zh"]){
-        self.datas = @[@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"J",@"K",@"L",@"M",@"N",@"P",@"R",@"S",@"T",@"W",@"X",@"Y",@"Z"];
-        self.countrys = [NSArray arrayWithArray:self.countrys_zh];
-    }else{
-        self.datas = @[@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"Y",@"Z"];
-        self.countrys = [NSArray arrayWithArray:self.countrys_en];
-    }
-    
+//    if([language hasPrefix:@"zh"]){
+//        self.datas = @[@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"J",@"K",@"L",@"M",@"N",@"P",@"R",@"S",@"T",@"W",@"X",@"Y",@"Z"];
+//        self.countrys = [NSArray arrayWithArray:self.countrys_zh];
+//    }else{
+//        self.datas = @[@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"Y",@"Z"];
+//        self.countrys = [NSArray arrayWithArray:self.countrys_en];
+//    }
+    self.datas = @[@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"J",@"K",@"L",@"M",@"N",@"P",@"R",@"S",@"T",@"W",@"X",@"Y",@"Z"];
+    self.countrys = [NSArray arrayWithArray:self.countrys_zh];
     [super viewDidLoad];
     [self initComponent];
 	// Do any additional setup after loading the view.
