@@ -37,7 +37,7 @@
 #import "UDPManager.h"
 #import "PAIOUnit.h"//rtsp监控界面弹出修改
 #import "MD5Manager.h"
-
+#import "RNMainViewController.h"
 @implementation AppDelegate{
     UIAlertView *_alarmAlertView;
 }
@@ -190,11 +190,12 @@
         
 //        NSString *lacalFlag = [[NSUserDefaults standardUserDefaults] objectForKey:@"AppStartInfoFlag"];
 //        if (!lacalFlag) {//first launching app(其实没必要判断，第一次只在进入登录界面时发生)
-            self.window.rootViewController = self.mainController;
+        RNMainViewController *main = [[[RNMainViewController alloc] init] autorelease];
+            self.window.rootViewController = main;
 //        }else{
 //            self.window.rootViewController = [[[LaunchImageTransition alloc] initWithViewController:self.mainController animation:UIModalTransitionStyleCrossDissolve] autorelease];
 //        }
-        [mainController release];
+//        [mainController release];
         
         LoginResult *loginResult = [UDManager getLoginInfo];
         [[NetManager sharedManager] getAccountInfo:loginResult.contactId sessionId:loginResult.sessionId callBack:^(id JSON){
@@ -209,18 +210,20 @@
             
         }];
     }else{
-        LoginController *loginController = [[LoginController alloc] init];
-        AutoNavigation *mainController = [[AutoNavigation alloc] initWithRootViewController:loginController];
+        RNMainViewController *main = [[[RNMainViewController alloc] init] autorelease];
+        self.window.rootViewController = main;
+//        LoginController *loginController = [[LoginController alloc] init];
+//        AutoNavigation *mainController = [[AutoNavigation alloc] initWithRootViewController:loginController];
         
 //        NSString *lacalFlag = [[NSUserDefaults standardUserDefaults] objectForKey:@"AppStartInfoFlag"];
 //        if (!lacalFlag) {//first launching app
-            self.window.rootViewController = mainController;
+            self.window.rootViewController = main;
 //        }else{
 //            self.window.rootViewController = [[[LaunchImageTransition alloc] initWithViewController:mainController animation:UIModalTransitionStyleCrossDissolve] autorelease];
 //        }
         
-        [loginController release];
-        [mainController release];
+//        [loginController release];
+//        [mainController release];
     }
 
     [self.window makeKeyAndVisible];

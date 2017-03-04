@@ -382,6 +382,9 @@
 		25FFFC4519AF2AA0007C8C79 /* rscode.c in Sources */ = {isa = PBXBuildFile; fileRef = 25FFFC3C19AF2AA0007C8C79 /* rscode.c */; };
 		25FFFC4619AF2AA0007C8C79 /* split.c in Sources */ = {isa = PBXBuildFile; fileRef = 25FFFC3E19AF2AA0007C8C79 /* split.c */; };
 		25FFFC4919AF2AAE007C8C79 /* QRCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FFFC4819AF2AAE007C8C79 /* QRCodeGenerator.m */; };
+		3EE0EAB91E6AABFE0048AE82 /* NativeInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE0EAB61E6AABFE0048AE82 /* NativeInterface.m */; };
+		3EE0EABA1E6AABFE0048AE82 /* RNMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE0EAB81E6AABFE0048AE82 /* RNMainViewController.m */; };
+		49D713B0237E6DB6BBD73DFB /* libPods-Yoosee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DAA06DEC5128523FE1DEDC /* libPods-Yoosee.a */; };
 		5C08125E1CA0ECF300AD89C6 /* monitor_sound_off_h.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C08125C1CA0ECF300AD89C6 /* monitor_sound_off_h.png */; };
 		5C08125F1CA0ECF300AD89C6 /* monitor_sound_on_h.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C08125D1CA0ECF300AD89C6 /* monitor_sound_on_h.png */; };
 		5C0812611CA0F59C00AD89C6 /* monitor_switch_screen_img_h.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C0812601CA0F59C00AD89C6 /* monitor_switch_screen_img_h.png */; };
@@ -640,6 +643,7 @@
 		03EE5CF21C86DCE6001EDD0C /* ic_ctl_modeswitch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_ctl_modeswitch.png; sourceTree = "<group>"; };
 		03EEA2091BC65B600028C49E /* ic_header_ap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_header_ap.png; sourceTree = "<group>"; };
 		03EEA20A1BC65B600028C49E /* ic_header_play_ap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_header_play_ap.png; sourceTree = "<group>"; };
+		0F981057785D7BBAB3C3C76C /* Pods-Yoosee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yoosee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yoosee/Pods-Yoosee.debug.xcconfig"; sourceTree = "<group>"; };
 		18705AFD19EBBD630048057D /* img_scanning_code.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_scanning_code.png; sourceTree = "<group>"; };
 		188374A319F743F50035E9D6 /* AlarmHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmHistoryCell.h; sourceTree = "<group>"; };
 		188374A419F743F50035E9D6 /* AlarmHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmHistoryCell.m; sourceTree = "<group>"; };
@@ -1126,6 +1130,10 @@
 		25FFFC3F19AF2AA0007C8C79 /* split.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = split.h; sourceTree = "<group>"; };
 		25FFFC4719AF2AAE007C8C79 /* QRCodeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeGenerator.h; sourceTree = "<group>"; };
 		25FFFC4819AF2AAE007C8C79 /* QRCodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeGenerator.m; sourceTree = "<group>"; };
+		3EE0EAB51E6AABFE0048AE82 /* NativeInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeInterface.h; sourceTree = "<group>"; };
+		3EE0EAB61E6AABFE0048AE82 /* NativeInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeInterface.m; sourceTree = "<group>"; };
+		3EE0EAB71E6AABFE0048AE82 /* RNMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNMainViewController.h; sourceTree = "<group>"; };
+		3EE0EAB81E6AABFE0048AE82 /* RNMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNMainViewController.m; sourceTree = "<group>"; };
 		5C08125C1CA0ECF300AD89C6 /* monitor_sound_off_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monitor_sound_off_h.png; sourceTree = "<group>"; };
 		5C08125D1CA0ECF300AD89C6 /* monitor_sound_on_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monitor_sound_on_h.png; sourceTree = "<group>"; };
 		5C0812601CA0F59C00AD89C6 /* monitor_switch_screen_img_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monitor_switch_screen_img_h.png; sourceTree = "<group>"; };
@@ -1402,6 +1410,8 @@
 		A9C4B7CF1BA970340020F4EA /* ic_contact_type_doorbell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_contact_type_doorbell.png; sourceTree = "<group>"; };
 		A9F4F8A81B40E96300C17F03 /* elian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = elian.h; sourceTree = "<group>"; };
 		A9F4F8A91B40E96300C17F03 /* libelian.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libelian.a; sourceTree = "<group>"; };
+		D6DAA06DEC5128523FE1DEDC /* libPods-Yoosee.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Yoosee.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2F29A2EDFB480236046E74A /* Pods-Yoosee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yoosee.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yoosee/Pods-Yoosee.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1435,6 +1445,7 @@
 				2583C57E18DAE9E100480FA7 /* CoreGraphics.framework in Frameworks */,
 				2583C58018DAE9E100480FA7 /* UIKit.framework in Frameworks */,
 				2583C57C18DAE9E000480FA7 /* Foundation.framework in Frameworks */,
+				49D713B0237E6DB6BBD73DFB /* libPods-Yoosee.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1529,10 +1540,12 @@
 		2583C56F18DAE9E000480FA7 = {
 			isa = PBXGroup;
 			children = (
+				3EE0EAB41E6AAB6A0048AE82 /* Monitor */,
 				2583C58118DAE9E100480FA7 /* Yoosee */,
 				2583C59A18DAE9E100480FA7 /* YooseeTests */,
 				2583C57A18DAE9E000480FA7 /* Frameworks */,
 				2583C57918DAE9E000480FA7 /* Products */,
+				78DADCFD566CF137D7B5735F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1580,6 +1593,7 @@
 				2583C57D18DAE9E100480FA7 /* CoreGraphics.framework */,
 				2583C57F18DAE9E100480FA7 /* UIKit.framework */,
 				2583C59418DAE9E100480FA7 /* XCTest.framework */,
+				D6DAA06DEC5128523FE1DEDC /* libPods-Yoosee.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2389,6 +2403,17 @@
 			name = libqrencode;
 			sourceTree = "<group>";
 		};
+		3EE0EAB41E6AAB6A0048AE82 /* Monitor */ = {
+			isa = PBXGroup;
+			children = (
+				3EE0EAB51E6AABFE0048AE82 /* NativeInterface.h */,
+				3EE0EAB61E6AABFE0048AE82 /* NativeInterface.m */,
+				3EE0EAB71E6AABFE0048AE82 /* RNMainViewController.h */,
+				3EE0EAB81E6AABFE0048AE82 /* RNMainViewController.m */,
+			);
+			path = Monitor;
+			sourceTree = "<group>";
+		};
 		5CDE8BB81CABAD28007FCBB8 /* MyPickerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -2400,6 +2425,15 @@
 				5CDE8BBE1CABAD40007FCBB8 /* MXSCycleScrollView3.m */,
 			);
 			path = MyPickerView;
+			sourceTree = "<group>";
+		};
+		78DADCFD566CF137D7B5735F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F981057785D7BBAB3C3C76C /* Pods-Yoosee.debug.xcconfig */,
+				E2F29A2EDFB480236046E74A /* Pods-Yoosee.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		A11ABA4F1A78E6F100EF1A1A /* MPNotificationView */ = {
@@ -2618,9 +2652,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2583C5A418DAE9E100480FA7 /* Build configuration list for PBXNativeTarget "Yoosee" */;
 			buildPhases = (
+				AC5F437C5693BFAE358F8DE4 /* [CP] Check Pods Manifest.lock */,
 				2583C57418DAE9E000480FA7 /* Sources */,
 				2583C57518DAE9E000480FA7 /* Frameworks */,
 				2583C57618DAE9E000480FA7 /* Resources */,
+				9C0FD112687228629021CFCB /* [CP] Embed Pods Frameworks */,
+				78004FC610C1CE0A81284270 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2659,7 +2696,7 @@
 				ORGANIZATIONNAME = guojunyi;
 				TargetAttributes = {
 					2583C57718DAE9E000480FA7 = {
-						DevelopmentTeam = NYT8A44JNZ;
+						DevelopmentTeam = 46H75LDANK;
 					};
 					2583C59218DAE9E100480FA7 = {
 						TestTargetID = 2583C57718DAE9E000480FA7;
@@ -3049,6 +3086,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		78004FC610C1CE0A81284270 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yoosee/Pods-Yoosee-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C0FD112687228629021CFCB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yoosee/Pods-Yoosee-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC5F437C5693BFAE358F8DE4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2583C57418DAE9E000480FA7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -3187,6 +3272,7 @@
 				A1FE29A11A1197290094EAC6 /* MJRefreshHeaderView.m in Sources */,
 				A1472CD81AB0329B00EB704E /* QRCodeGuardFirst.m in Sources */,
 				0349FCB71BCF83DB0070D354 /* ContactController_password_ap.m in Sources */,
+				3EE0EABA1E6AABFE0048AE82 /* RNMainViewController.m in Sources */,
 				25FF3726192B212100DACFE5 /* P2PDefenceAreaCell.m in Sources */,
 				A113ED711A679D890070452B /* MessageController.m in Sources */,
 				25D9C71019233F7B00579106 /* P2PVideoFormatSettingCell.m in Sources */,
@@ -3205,6 +3291,7 @@
 				A1472CD71AB0329B00EB704E /* QRCodeController.m in Sources */,
 				25DAAE3618FBAC590010B7B3 /* FListManager.m in Sources */,
 				25D8DC8518EBBF5B0051E4FD /* RecentCell.m in Sources */,
+				3EE0EAB91E6AABFE0048AE82 /* NativeInterface.m in Sources */,
 				25E8170B1932FEC7002946C7 /* CreateInitPasswordController.m in Sources */,
 				A1A9AE3B1AF200B3003EAA0C /* CustomView.m in Sources */,
 				25D9C70719231B3500579106 /* P2PSettingCell.m in Sources */,
@@ -3377,6 +3464,7 @@
 		};
 		2583C5A518DAE9E100480FA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F981057785D7BBAB3C3C76C /* Pods-Yoosee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Yoosee";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-Yoosee";
@@ -3407,7 +3495,16 @@
 					"$(PROJECT_DIR)/md5",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.amenuo.monitor;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"React\"",
+					"-l\"stdc++\"",
+					"-framework",
+					"\"JavaScriptCore\"",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.amenuo.monitor.ios;
 				PRODUCT_NAME = Yoosee;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -3419,6 +3516,7 @@
 		};
 		2583C5A618DAE9E100480FA7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2F29A2EDFB480236046E74A /* Pods-Yoosee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Yoosee";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-Yoosee";
@@ -3448,7 +3546,16 @@
 					"$(PROJECT_DIR)/rtsp",
 					"$(PROJECT_DIR)/md5",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.amenuo.monitor;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"React\"",
+					"-l\"stdc++\"",
+					"-framework",
+					"\"JavaScriptCore\"",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.amenuo.monitor.ios;
 				PRODUCT_NAME = Yoosee;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;

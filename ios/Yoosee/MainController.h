@@ -26,6 +26,7 @@
 @property (nonatomic,strong) Contact * contact;//重新调整监控画面
 @property (nonatomic, assign) id<MainControllerDelegate> mainControllerDelegate;
 
++(id)shareInstance;
 -(void)setUpCallWithId:(NSString*)contactId password:(NSString*)password callType:(P2PCallType)type;
 -(void)dismissP2PView;
 -(void)dismissP2PView:(void (^)())callBack;
