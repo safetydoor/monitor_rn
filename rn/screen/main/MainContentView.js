@@ -80,8 +80,14 @@ export default class MainContentView extends React.Component {
                 'l_temp': $op(responseData).getString('results.0.daily.0.low'),
                 'h_temp': $op(responseData).getString('results.0.daily.0.high'),
             };
-            return PHttpUtils.requestCategory();
-        }).then((response)=> {
+            return this.requestOthers();
+        }).catch(()=>{
+            this.requestOthers();
+        })
+    }
+
+    requestOthers() {
+        PHttpUtils.requestCategory().then((response)=> {
             return response.json()
         }).then((responseData)=> {
             this.category = responseData.result;

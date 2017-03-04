@@ -75,25 +75,21 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
     },
     date: {
-        flex: 1,
         color: PColor.white,
         marginTop: 30,
         fontSize: 14,
     },
     time: {
-        flex: 1,
         color: PColor.white,
         marginTop: 10,
         fontSize: 20,
     },
     location: {
-        flex: 1,
         color: PColor.white,
         marginTop: 10,
         fontSize: 18,
     },
     temperature: {
-        flex: 1,
         color: PColor.white,
         marginTop: 10,
         fontSize: 15,
