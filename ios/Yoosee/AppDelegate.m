@@ -169,7 +169,7 @@
     {
         self.dwApContactID = ap3cid;
         self.sWifi = [Utils currentWifiSSID];
-        MainController *mainController_ap = [[MainController alloc] init];
+        MainController *mainController_ap = [MainController shareInstance];
         self.mainController_ap = mainController_ap;
         self.window.rootViewController = self.mainController_ap;
         [self.window makeKeyAndVisible];
@@ -185,12 +185,12 @@
     
     if([UDManager isLogin]){
         
-        MainController *mainController = [[MainController alloc] init];
+        MainController *mainController = [MainController shareInstance];
         self.mainController = mainController;
         
 //        NSString *lacalFlag = [[NSUserDefaults standardUserDefaults] objectForKey:@"AppStartInfoFlag"];
 //        if (!lacalFlag) {//first launching app(其实没必要判断，第一次只在进入登录界面时发生)
-        RNMainViewController *main = [[[RNMainViewController alloc] init] autorelease];
+        RNMainViewController *main = [RNMainViewController shareInstance];
             self.window.rootViewController = main;
 //        }else{
 //            self.window.rootViewController = [[[LaunchImageTransition alloc] initWithViewController:self.mainController animation:UIModalTransitionStyleCrossDissolve] autorelease];
@@ -210,7 +210,7 @@
             
         }];
     }else{
-        RNMainViewController *main = [[[RNMainViewController alloc] init] autorelease];
+        RNMainViewController *main = [RNMainViewController shareInstance];
         self.window.rootViewController = main;
 //        LoginController *loginController = [[LoginController alloc] init];
 //        AutoNavigation *mainController = [[AutoNavigation alloc] initWithRootViewController:loginController];
@@ -1226,7 +1226,7 @@ UIBackgroundTaskIdentifier backgroundTask;
             //联网模式->单机模式
             if (!self.mainController_ap)
             {
-                MainController *mainController_ap = [[MainController alloc] init];
+                MainController *mainController_ap = [MainController shareInstance];
                 self.mainController_ap = mainController_ap;
             }
             else
@@ -1248,7 +1248,7 @@ UIBackgroundTaskIdentifier backgroundTask;
                 LoginResult *loginResult = [UDManager getLoginInfo];
                 if (!self.mainController)
                 {
-                    MainController *mainController = [[MainController alloc] init];
+                    MainController *mainController = [MainController shareInstance];
                     self.mainController = mainController;
                 }
                 else

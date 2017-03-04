@@ -726,7 +726,7 @@
     [UDManager setLoginInfo:loginResult];
     [loginResult release];
     
-    MainController *mainController = [[MainController alloc] init];
+    MainController *mainController = [MainController shareInstance];
     self.view.window.rootViewController = mainController;
     [[AppDelegate sharedDefault] setMainController:mainController];
     [mainController release];
@@ -803,7 +803,7 @@
                 [UDManager setLoginInfo:loginResult];
                 [[NSUserDefaults standardUserDefaults] setObject:username forKey:@"USER_NAME"];
                 [[NSUserDefaults standardUserDefaults] setInteger:self.loginType forKey:@"LOGIN_TYPE"];
-                MainController *mainController = [[MainController alloc] init];
+                MainController *mainController = [MainController shareInstance];
                 self.view.window.rootViewController = mainController;
                 [[AppDelegate sharedDefault] setMainController:mainController];
                 [mainController release];
@@ -959,7 +959,7 @@
                     [UDManager setLoginInfo:loginResult];
                     [[NSUserDefaults standardUserDefaults] setObject:phone forKey:@"PHONE_NUMBER"];
                     [[NSUserDefaults standardUserDefaults] setInteger:self.loginType forKey:@"LOGIN_TYPE"];
-                    MainController *mainController = [[MainController alloc] init];
+                    MainController *mainController = [MainController shareInstance];
                     self.view.window.rootViewController = mainController;
                     [[AppDelegate sharedDefault] setMainController:mainController];
                     [mainController release];

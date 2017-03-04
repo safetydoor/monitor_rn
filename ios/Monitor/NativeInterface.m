@@ -32,7 +32,7 @@ RCT_EXPORT_METHOD(jumpToCamera)
         }
         if([UDManager isLogin]){
             
-            MainController *mainController = [[MainController alloc] init];
+            MainController *mainController = [MainController shareInstance];
             
             LoginResult *loginResult = [UDManager getLoginInfo];
             [[NetManager sharedManager] getAccountInfo:loginResult.contactId sessionId:loginResult.sessionId callBack:^(id JSON){

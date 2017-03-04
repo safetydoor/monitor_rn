@@ -175,9 +175,9 @@
 #define EMPTY_LABEL_HEIGHT 50
 
 -(void)onBackPress{
-    [self dismissViewControllerAnimated:YES completion:nil];
-//    RNMainViewController *mainController = [[[RNMainViewController alloc] init] autorelease];
-//    self.view.window.rootViewController = mainController;
+//    [self dismissViewControllerAnimated:YES completion:nil];
+    RNMainViewController *mainController = [RNMainViewController shareInstance];
+    self.view.window.rootViewController = mainController;
 }
 -(void)initComponent{
  

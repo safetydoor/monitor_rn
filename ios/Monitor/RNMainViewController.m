@@ -15,6 +15,18 @@
 
 @implementation RNMainViewController
 
+static RNMainViewController *_instance = nil;
+
++(instancetype) shareInstance
+{
+    static dispatch_once_t onceToken ;
+    dispatch_once(&onceToken, ^{
+        _instance = [[self alloc] init] ;
+    }) ;
+    return _instance ;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"index.ios" withExtension:@"jsbundle"];

@@ -10,4 +10,5 @@
 
 @interface RNMainViewController : UIViewController
 
++(instancetype) shareInstance;
 @end

@@ -115,7 +115,7 @@
         if (self.isQuitWebSite) {
             if([UDManager isLogin]){
                 
-                MainController *mainController = [[MainController alloc] init];
+                MainController *mainController = [MainController shareInstance];
                 [AppDelegate sharedDefault].mainController = mainController;
                 self.view.window.rootViewController = [AppDelegate sharedDefault].mainController;
                 [mainController release];
