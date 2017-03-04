@@ -2695,7 +2695,7 @@
 				ORGANIZATIONNAME = guojunyi;
 				TargetAttributes = {
 					2583C57718DAE9E000480FA7 = {
-						DevelopmentTeam = QVUT4DD8UD;
+						DevelopmentTeam = 46H75LDANK;
 					};
 					2583C59218DAE9E100480FA7 = {
 						TestTargetID = 2583C57718DAE9E000480FA7;
@@ -3497,7 +3497,7 @@
 					"\"JavaScriptCore\"",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.amenuo.monitor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amenuo.monitor.ios;
 				PRODUCT_NAME = Yoosee;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -3548,7 +3548,7 @@
 					"\"JavaScriptCore\"",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.amenuo.monitor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amenuo.monitor.ios;
 				PRODUCT_NAME = Yoosee;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
