@@ -384,6 +384,9 @@
 		25FFFC4919AF2AAE007C8C79 /* QRCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FFFC4819AF2AAE007C8C79 /* QRCodeGenerator.m */; };
 		3EE0EAB91E6AABFE0048AE82 /* NativeInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE0EAB61E6AABFE0048AE82 /* NativeInterface.m */; };
 		3EE0EABA1E6AABFE0048AE82 /* RNMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE0EAB81E6AABFE0048AE82 /* RNMainViewController.m */; };
+		3EE0EAF21E6ABE420048AE82 /* index.ios.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 3EE0EADA1E6ABE420048AE82 /* index.ios.jsbundle */; };
+		3EE0EAF31E6ABE420048AE82 /* index.ios.jsbundle.meta in Resources */ = {isa = PBXBuildFile; fileRef = 3EE0EADB1E6ABE420048AE82 /* index.ios.jsbundle.meta */; };
+		3EE0EAF51E6ABE9F0048AE82 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 3EE0EAF41E6ABE9F0048AE82 /* assets */; };
 		49D713B0237E6DB6BBD73DFB /* libPods-Yoosee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DAA06DEC5128523FE1DEDC /* libPods-Yoosee.a */; };
 		5C08125E1CA0ECF300AD89C6 /* monitor_sound_off_h.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C08125C1CA0ECF300AD89C6 /* monitor_sound_off_h.png */; };
 		5C08125F1CA0ECF300AD89C6 /* monitor_sound_on_h.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C08125D1CA0ECF300AD89C6 /* monitor_sound_on_h.png */; };
@@ -1134,6 +1137,9 @@
 		3EE0EAB61E6AABFE0048AE82 /* NativeInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeInterface.m; sourceTree = "<group>"; };
 		3EE0EAB71E6AABFE0048AE82 /* RNMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNMainViewController.h; sourceTree = "<group>"; };
 		3EE0EAB81E6AABFE0048AE82 /* RNMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNMainViewController.m; sourceTree = "<group>"; };
+		3EE0EADA1E6ABE420048AE82 /* index.ios.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = index.ios.jsbundle; sourceTree = "<group>"; };
+		3EE0EADB1E6ABE420048AE82 /* index.ios.jsbundle.meta */ = {isa = PBXFileReference; lastKnownFileType = file; path = index.ios.jsbundle.meta; sourceTree = "<group>"; };
+		3EE0EAF41E6ABE9F0048AE82 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		5C08125C1CA0ECF300AD89C6 /* monitor_sound_off_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monitor_sound_off_h.png; sourceTree = "<group>"; };
 		5C08125D1CA0ECF300AD89C6 /* monitor_sound_on_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monitor_sound_on_h.png; sourceTree = "<group>"; };
 		5C0812601CA0F59C00AD89C6 /* monitor_switch_screen_img_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monitor_switch_screen_img_h.png; sourceTree = "<group>"; };
@@ -1540,6 +1546,7 @@
 		2583C56F18DAE9E000480FA7 = {
 			isa = PBXGroup;
 			children = (
+				3EE0EABB1E6ABE420048AE82 /* bundle */,
 				3EE0EAB41E6AAB6A0048AE82 /* Monitor */,
 				2583C58118DAE9E100480FA7 /* Yoosee */,
 				2583C59A18DAE9E100480FA7 /* YooseeTests */,
@@ -2414,6 +2421,16 @@
 			path = Monitor;
 			sourceTree = "<group>";
 		};
+		3EE0EABB1E6ABE420048AE82 /* bundle */ = {
+			isa = PBXGroup;
+			children = (
+				3EE0EAF41E6ABE9F0048AE82 /* assets */,
+				3EE0EADA1E6ABE420048AE82 /* index.ios.jsbundle */,
+				3EE0EADB1E6ABE420048AE82 /* index.ios.jsbundle.meta */,
+			);
+			path = bundle;
+			sourceTree = "<group>";
+		};
 		5CDE8BB81CABAD28007FCBB8 /* MyPickerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -2741,6 +2758,7 @@
 				25DA77E619343C860007F089 /* anim_call_out3.png in Resources */,
 				257F75851980D4C30075D7F4 /* ic_infrared_right_p.png in Resources */,
 				25D0B2DF18ED524700B285FA /* bg_bar_btn_p.png in Resources */,
+				3EE0EAF31E6ABE420048AE82 /* index.ios.jsbundle.meta in Resources */,
 				A1D8E6171AC153760075E555 /* InfoPlist.strings in Resources */,
 				25E0DC0918F8E5F90046AF56 /* SVPullToRefresh.bundle in Resources */,
 				A9301A641C23326A008C6E0F /* ic_remember_pwd.png in Resources */,
@@ -2775,6 +2793,7 @@
 				25DB88A518E016B500BA3037 /* bg_keyboard_input_bar.png in Resources */,
 				5CEC6EB01C9AC82400ACE28E /* ic_defence_on.png in Resources */,
 				A9301A591C22A4B1008C6E0F /* ic_operator_item_playback_unknown_type.png in Resources */,
+				3EE0EAF51E6ABE9F0048AE82 /* assets in Resources */,
 				25E4327518FCFAAA00508B06 /* bg_operator_bar_arrow_top.png in Resources */,
 				2554AF7319D1113800B99445 /* ic_bar_left_qr_code.png in Resources */,
 				25FD2DB619B9936100D0C4AA /* ic_add_contact_manually.png in Resources */,
@@ -3028,6 +3047,7 @@
 				25D8DC9818EBE66D0051E4FD /* ic_call_in_accept.png in Resources */,
 				25DB887F18DFEEB600BA3037 /* ic_keyboard_monitor.png in Resources */,
 				A10CD88B1A159DF000231AD0 /* 2.png in Resources */,
+				3EE0EAF21E6ABE420048AE82 /* index.ios.jsbundle in Resources */,
 				03C527621C8D196E004C1033 /* ap_defence_on.png in Resources */,
 				25DD22B61936D4910082DCA3 /* bg_chat_left_p.png in Resources */,
 				A9B9E93F1C27F5FE001C6F15 /* monitor_localLenght_narrow_highlighted.png in Resources */,

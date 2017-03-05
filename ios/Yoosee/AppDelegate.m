@@ -128,7 +128,7 @@
     
     
     //app 启动时，检查更新
-    [self checkAppToUpdate];
+//    [self checkAppToUpdate];
     
     if(CURRENT_VERSION>=8.0){//8.0以后使用这种方法来注册推送通知
         UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge|UIUserNotificationTypeSound|UIUserNotificationTypeAlert categories:nil];
