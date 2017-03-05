@@ -382,6 +382,8 @@
 		25FFFC4519AF2AA0007C8C79 /* rscode.c in Sources */ = {isa = PBXBuildFile; fileRef = 25FFFC3C19AF2AA0007C8C79 /* rscode.c */; };
 		25FFFC4619AF2AA0007C8C79 /* split.c in Sources */ = {isa = PBXBuildFile; fileRef = 25FFFC3E19AF2AA0007C8C79 /* split.c */; };
 		25FFFC4919AF2AAE007C8C79 /* QRCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FFFC4819AF2AAE007C8C79 /* QRCodeGenerator.m */; };
+		3EABAF901E6B9F7200F6CFB3 /* Default-568.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EABAF8E1E6B9F7200F6CFB3 /* Default-568.png */; };
+		3EABAF911E6B9F7200F6CFB3 /* Default-568@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EABAF8F1E6B9F7200F6CFB3 /* Default-568@2x.png */; };
 		3EE0EAB91E6AABFE0048AE82 /* NativeInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE0EAB61E6AABFE0048AE82 /* NativeInterface.m */; };
 		3EE0EABA1E6AABFE0048AE82 /* RNMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE0EAB81E6AABFE0048AE82 /* RNMainViewController.m */; };
 		3EE0EAF21E6ABE420048AE82 /* index.ios.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 3EE0EADA1E6ABE420048AE82 /* index.ios.jsbundle */; };
@@ -1133,6 +1135,8 @@
 		25FFFC3F19AF2AA0007C8C79 /* split.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = split.h; sourceTree = "<group>"; };
 		25FFFC4719AF2AAE007C8C79 /* QRCodeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeGenerator.h; sourceTree = "<group>"; };
 		25FFFC4819AF2AAE007C8C79 /* QRCodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeGenerator.m; sourceTree = "<group>"; };
+		3EABAF8E1E6B9F7200F6CFB3 /* Default-568.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568.png"; sourceTree = "<group>"; };
+		3EABAF8F1E6B9F7200F6CFB3 /* Default-568@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568@2x.png"; sourceTree = "<group>"; };
 		3EE0EAB51E6AABFE0048AE82 /* NativeInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeInterface.h; sourceTree = "<group>"; };
 		3EE0EAB61E6AABFE0048AE82 /* NativeInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeInterface.m; sourceTree = "<group>"; };
 		3EE0EAB71E6AABFE0048AE82 /* RNMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNMainViewController.h; sourceTree = "<group>"; };
@@ -1546,6 +1550,8 @@
 		2583C56F18DAE9E000480FA7 = {
 			isa = PBXGroup;
 			children = (
+				3EABAF8E1E6B9F7200F6CFB3 /* Default-568.png */,
+				3EABAF8F1E6B9F7200F6CFB3 /* Default-568@2x.png */,
 				3EE0EABB1E6ABE420048AE82 /* bundle */,
 				3EE0EAB41E6AAB6A0048AE82 /* Monitor */,
 				2583C58118DAE9E100480FA7 /* Yoosee */,
@@ -2754,6 +2760,7 @@
 				A1A9AE1E1AF11A78003EAA0C /* ic_ctl_lock_off.png in Resources */,
 				5CD8A6B61CAA280200DB38C7 /* monitor_recall.png in Resources */,
 				25DDB7C318F7D82F0030F1D3 /* ic_tab_item_contact.png in Resources */,
+				3EABAF911E6B9F7200F6CFB3 /* Default-568@2x.png in Resources */,
 				25DA77E219343C860007F089 /* anim_call_in2.png in Resources */,
 				25DA77E619343C860007F089 /* anim_call_out3.png in Resources */,
 				257F75851980D4C30075D7F4 /* ic_infrared_right_p.png in Resources */,
@@ -3030,6 +3037,7 @@
 				A9301A321C224685008C6E0F /* monitor_press.png in Resources */,
 				A12DCA2B1B0C98FC00C2EEDF /* ic_ctl_hungup.png in Resources */,
 				25DCF19419062CEC001C0D0A /* amp5.png in Resources */,
+				3EABAF901E6B9F7200F6CFB3 /* Default-568.png in Resources */,
 				257F75841980D4C30075D7F4 /* ic_infrared_left.png in Resources */,
 				25D3B434194E9AEA001FF895 /* bg_message_count.png in Resources */,
 				5C08127D1CA2A0C200AD89C6 /* monitor_half_screen.png in Resources */,
